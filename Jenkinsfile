@@ -52,7 +52,7 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts artifacts: '**/target/*.war', allowEmptyArchive: true
+                    archiveArtifacts allowEmptyArchive: true, artifacts: '**/target/*.war', followSymlinks: false
                 }
             }
         }
