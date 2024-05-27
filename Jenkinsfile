@@ -52,7 +52,7 @@ pipeline {
             }
             post {
                 always {
-                    archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
+                    archiveArtifacts artifacts: '**/target/*.war', allowEmptyArchive: true
                 }
             }
         }
