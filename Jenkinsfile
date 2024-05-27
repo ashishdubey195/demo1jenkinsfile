@@ -55,6 +55,9 @@ pipeline {
                     archiveArtifacts artifacts: '**/target/*.war', allowEmptyArchive: true
                 }
             }
+        }
+    }
+} 
      post {
         failure {
             mail to: 'ashishdubey195@gmail.com',
@@ -62,8 +65,6 @@ pipeline {
                  body: "Something went wrong in the build: ${env.BUILD_URL}"
         }
      }
-   }
- }
-}    
+      
     
         
