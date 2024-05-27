@@ -55,14 +55,15 @@ pipeline {
                     archiveArtifacts artifacts: '**/target/*.war', allowEmptyArchive: true
                 }
             }
-        }
-    }
-    
-    post {
+     post {
         failure {
             mail to: 'ashishdubey195@gmail.com',
                  subject: "Jenkins Build Failed: ${currentBuild.fullDisplayName}",
                  body: "Something went wrong in the build: ${env.BUILD_URL}"
         }
-    }
-}
+     }
+   }
+ }
+}    
+    
+        
