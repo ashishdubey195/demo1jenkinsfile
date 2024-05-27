@@ -30,7 +30,7 @@ pipeline {
             }
             post {
                 always {
-                    archiveArtifacts artifacts: '**/target/pmd.xml', allowEmptyArchive: true
+                    archiveArtifacts allowEmptyArchive: true, artifacts: '**/target/pmd.xml', followSymlinks: false
                 }
             }
         }
