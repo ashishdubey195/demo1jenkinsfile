@@ -6,7 +6,7 @@ pipeline {
     agent any
     
     parameters {
-        string(name: 'gitrepo', defaultValue: 'https://github.com/Sonal0409/DevOpsCodeDemo.git', description: 'Enter the Git repository URL')
+       string defaultValue: 'https://github.com/Sonal0409/DevOpsCodeDemo.git', description: 'Enter the Git repository URL', name: 'gitrepo'
     }
     
     stages {
