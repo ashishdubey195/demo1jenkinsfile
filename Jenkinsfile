@@ -51,7 +51,7 @@ pipeline {
                 sh 'mvn package'
             }
             post {
-                always {
+                success {
                     archiveArtifacts artifacts: '**/target/*.war', allowEmptyArchive: true
                 }
             }
